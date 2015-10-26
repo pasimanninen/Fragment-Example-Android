@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <!--  landscape => Two Fragments side by side -->
+
+    <!--
+    	Layout Weight
+    	A larger weight value allows it to expand to fill any remaining space in the parent view.
+    	width should be 0dp to get it work
+    -->
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        class="fi.ptm.fragmentexample.EmployeesListFragment"/>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        class="fi.ptm.fragmentexample.DetailFragment"/>
+
+</LinearLayout>
